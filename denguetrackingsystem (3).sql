@@ -523,7 +523,7 @@ ALTER TABLE `people_phones`
 -- Indexes for table `residesat`
 --
 ALTER TABLE `residesat`
-  ADD PRIMARY KEY (`resides_id`,`patient_id`,`address_id`),
+  ADD PRIMARY KEY (`resides_id`),
   ADD KEY `patient_id` (`patient_id`),
   ADD KEY `address_id` (`address_id`);
 
