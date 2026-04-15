@@ -73,12 +73,11 @@ CREATE TABLE Donors (
 );
 
 CREATE TABLE ResidesAt (
-    resides_id INT AUTO_INCREMENT,
+    resides_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_id INT,
     address_id INT,
     is_primary BOOLEAN DEFAULT FALSE,
     address_type ENUM('Permanent', 'Current', 'Work') NOT NULL,
-    PRIMARY KEY (resides_id, patient_id, address_id),
     FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),
     FOREIGN KEY (address_id) REFERENCES Addresses(address_id)
 );
